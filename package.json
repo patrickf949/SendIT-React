@@ -10,6 +10,10 @@
     "start": "webpack-dev-server --open --mode development",
     "build": "webpack --mode production"
   },
+  "engines": {
+    "node": "10.15.3",
+    "npm": "6.4.1"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/patrickf949/SendIT-React.git"
@@ -44,6 +48,7 @@
   },
   "dependencies": {
     "css-loader": "^2.1.1",
+    "express": "^4.17.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-redux": "^7.0.3",
