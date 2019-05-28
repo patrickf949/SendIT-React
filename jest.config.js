@@ -17,7 +17,7 @@ module.exports = {
   roots: ["<rootDir>./src/tests/"],
 
   // The paths to modules that run some code to configure or set up the testing environment before each test
-  setupFiles: ["<rootDir>./src/setupTests.js"],
+  setupFiles: ["<rootDir>./src/SetupTests.js"],
 
   // The test environment that will be used for testing
   testEnvironment: "jest-environment-jsdom",
