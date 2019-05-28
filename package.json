@@ -6,6 +6,7 @@
   "scripts": {
     "test": "jest -u --coverage",
     "test:watch": "jest --watch",
+    "test:coveralls": "jest --coverage --coverageReporters=text-lcov | coveralls",
     "start": "webpack-dev-server --open --mode development",
     "build": "webpack --mode production"
   },
@@ -25,6 +26,7 @@
     "@babel/preset-env": "^7.4.5",
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.6",
+    "coveralls": "^3.0.3",
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.13.2",
     "html-loader": "^0.5.5",
