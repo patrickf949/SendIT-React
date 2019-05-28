@@ -1,14 +1,14 @@
 import React, { Component } from "react";
 import "../styles/home.scss";
 
-class Home extends Component {
+class Register extends Component {
   render() {
     return (
       <div>
-        <h1>Welcome to SendIT</h1>
+        <h1>Register</h1>
       </div>
     );
   }
 }
 
-export default Home;
+export default Register;
