@@ -4,7 +4,8 @@
   "description": "SendIT is a courier service that helps users deliver parcels to different destinations. SendIT provides courier quotes based on weight categories.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest -u --coverage",
+    "test:watch": "jest --watch",
     "start": "webpack-dev-server --open --mode development",
     "build": "webpack --mode production"
   },
@@ -24,9 +25,13 @@
     "@babel/preset-env": "^7.4.5",
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.6",
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.13.2",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
+    "jest": "^24.8.0",
     "node-sass": "^4.12.0",
+    "react-test-renderer": "^16.8.6",
     "redux-devtools-extension": "^2.13.8",
     "redux-thunk": "^2.3.0",
     "sass-loader": "^7.1.0",
@@ -40,6 +45,7 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-redux": "^7.0.3",
+    "react-router-dom": "^5.0.0",
     "redux": "^4.0.1"
   }
 }

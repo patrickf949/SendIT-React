@@ -1,3 +1,8 @@
 node_modules/
 package-lock.json
+<<<<<<< HEAD
 dist/
+=======
+dist/
+coverage/
+>>>>>>> ch(react-router): setup react router
