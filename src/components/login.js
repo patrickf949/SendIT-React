@@ -1,5 +1,6 @@
 import React from "react";
 import "../styles/login.scss";
+import { Link } from "react-router-dom";
 
 const Login = props => {
   const {
@@ -13,7 +14,7 @@ const Login = props => {
   let Loader = require("react-loader");
   return (
     <div className="container">
-      <form className="form-control" onSubmit={handleSubmit}>
+      <form className="form-control form-container" onSubmit={handleSubmit}>
         <h3>Welcome back to SendIT</h3>
         <h4>Your package partner</h4>
         <input
@@ -34,6 +35,8 @@ const Login = props => {
           required
         />
         <input type="submit" className="btn btn-primary" value="Sign In" />
+        <span>Do not have an account?</span>
+        <Link to="/register"> Sign Up</Link>
       </form>
     </div>
   );
