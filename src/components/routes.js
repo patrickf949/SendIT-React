@@ -1,14 +1,18 @@
-import { BrowserRouter, Route } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 import React, { Component } from "react";
 import Home from "./home";
 import Register from "./register";
+import LoginContainer from "../containers/loginContainer";
 
 class Routes extends Component {
   render() {
     return (
       <BrowserRouter>
-        <Route exact path="/" component={Home} />
-        <Route path="/register" component={Register} />
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route path="/register" component={Register} />
+          <Route path="/login" component={LoginContainer} />
+        </Switch>
       </BrowserRouter>
     );
   }
