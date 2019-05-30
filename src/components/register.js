@@ -17,7 +17,7 @@ const Register = props => {
   return (
     <div className="container">
       <form className="form-control form-container" onSubmit={handleSubmit}>
-        <h3>Welcome back to SendIT</h3>
+        <h3>Welcome to SendIT</h3>
         <h4>Your package partner</h4>
         <input
           type="text"
@@ -37,12 +37,14 @@ const Register = props => {
         />
         <Loader loaded={!isProcessing} />
         <input
-          type="number"
+          type="text"
           className="form-control text-field"
           name="contact"
           placeholder="contact"
           onChange={handleChange}
           required={true}
+          pattern="^!*([0-9]!*){10,15}$"
+          title="Contact should have atleast 10 digits and atmost 15 digits"
         />
 
         <input
@@ -52,13 +54,17 @@ const Register = props => {
           placeholder="password"
           onChange={handleChange}
           required={true}
-          pattern="^(?=.*\d)(?=.*[#$@!%&*?])[A-Za-z\d#$@!%&*?]{8,}$"
+          pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&]){8,}"
           title={
-            "Password should have atleast 8 characters, 1 number and one special character"
+            "Password should have atleast 8 characters, 1 uppercase and 1 lowercase character" +
+            "1 number and one special character"
           }
         />
-        <input type="submit" className="btn btn-primary" value="Sign Up" />
+        <div>
+          <input type="submit" className="btn btn-primary" value="Sign Up" />
+        </div>
         <span>Already have an account?</span>
+
         <Link to="/login"> Sign In</Link>
       </form>
     </div>

@@ -23,11 +23,11 @@ export const LoginRequest = (userInfo, props) => async dispatch => {
     );
     dispatch(successLogin(response));
     sessionStorage.setItem("Access_token", response.data.Access_token);
-    toast.success(`Welcome Login Successful`, {
+    toast.success(`${response.data.message}`, {
       position: toast.POSITION.TOP_RIGHT,
       autoClose: 3000,
       hideProgressBar: false,
-      onClose: props.history.push("/")
+      onClose: (window.location.href = "/dashboard")
     });
   } catch (error) {
     dispatch({
