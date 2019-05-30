@@ -1,10 +1,10 @@
-import React from "react";
-import renderer from "react-test-renderer";
+import React, { BrowserRouter } from "react";
+import { shallow } from "enzyme";
 import Login from "../../components/login";
 
 describe("Login component", () => {
   it("should render without crashing", () => {
-    const wrapper = renderer.create(<Login />);
-    expect(wrapper.toJSON()).toMatchSnapshot();
+    const wrapper = shallow(<Login />);
+    expect(wrapper).toMatchSnapshot();
   });
 });

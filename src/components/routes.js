@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import React, { Component } from "react";
 import Home from "./home";
-import Register from "./register";
+import RegisterContainer from "../containers/registerContainer";
 import LoginContainer from "../containers/loginContainer";
 
 class Routes extends Component {
@@ -10,7 +10,7 @@ class Routes extends Component {
       <BrowserRouter>
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route path="/register" component={Register} />
+          <Route path="/register" component={RegisterContainer} />
           <Route path="/login" component={LoginContainer} />
         </Switch>
       </BrowserRouter>

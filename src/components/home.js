@@ -41,7 +41,7 @@ class Home extends Component {
           </p>
           <div>
             <Link to="/login">
-              <button>Login</button>
+            <button> Login</button>
             </Link>
             <Link to="/register">
               <button>Sign Up</button>

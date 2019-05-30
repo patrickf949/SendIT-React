@@ -1,12 +1,12 @@
 import React from "react";
 import configureStore from "redux-mock-store";
 import { shallow } from "enzyme";
-import moxios from "moxios";
 import thunk from "redux-thunk";
+import moxios from "moxios";
 import {
-  LoginContainer,
+  RegisterContainer,
   mapStateToProps
-} from "../../containers/loginContainer";
+} from "../../containers/registerContainer";
 
 describe("login container", () => {
   const initialState = {
@@ -17,7 +17,7 @@ describe("login container", () => {
   };
 
   const nextProps = {
-    loginSuccess: true
+    registerSuccess: true
   };
   const mockFn = jest.fn();
   const mockStore = configureStore([thunk]);
@@ -28,7 +28,7 @@ describe("login container", () => {
     store = mockStore(initialState);
     moxios.install();
     wrapper = shallow(
-      <LoginContainer open={false} close={mockFn} {...props} />
+      <RegisterContainer open={false} close={mockFn} {...props} />
     );
   });
 
@@ -51,9 +51,9 @@ describe("login container", () => {
 
   it("should handle the onSubmit event", () => {
     const props = {
-      LoginRequest: jest.fn()
+      RegisterRequest: jest.fn()
     };
-    let wrapper = shallow(<LoginContainer {...props} />);
+    let wrapper = shallow(<RegisterContainer {...props} />);
     const instance = wrapper.instance();
     const event = {
       target: {
@@ -68,19 +68,13 @@ describe("login container", () => {
 
   it("should mapStateToProps", () => {
     const state = {
-      auth_login: { isProcessing: false }
+      auth_register: { isProcessing: false }
     };
     expect(mapStateToProps(state)).toEqual({ isProcessing: false });
   });
-  it("should not redirect on failed login", () => {
-    wrapper.setProps({ loginSuccess: false });
+  it("should not redirect on failed register", () => {
+    wrapper.setProps({ registerSuccess: false });
 
     expect(props.history.push).toBeCalledTimes(0);
-  });
-
-  it("should redirect on successful login", () => {
-    wrapper.setProps({ ...nextProps });
-
-    expect(props.history.push).toBeCalledWith("/");
   });
 });
