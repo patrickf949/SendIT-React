@@ -6,8 +6,6 @@ import { toast } from "react-toastify";
 export const getParcelAction = parcelId => {
   return async dispatch => {
     try {
-      console.log("enters catch");
-
       const response = await axios({
         url: endpoints.backend + "parcels/" + parcelId,
         method: "GET",
@@ -15,15 +13,13 @@ export const getParcelAction = parcelId => {
           Authorization: `Bearer ${sessionStorage.getItem("Access_token")}`
         }
       });
-      console.log(response);
       dispatch(fetchParcelSuccess(response.data));
     } catch (error) {
-      console.log("enters catch", error);
       const errors = error.response.data;
       for (var key in errors) {
         toast.error(`${key}: ${errors[key]}`, {
           position: toast.POSITION.TOP_RIGHT,
-          autoClose: false,
+          autoClose: 4000,
           hideProgressBar: false
         });
       }

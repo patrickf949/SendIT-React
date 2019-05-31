@@ -13,15 +13,13 @@ export const getParcelsAction = () => {
           Authorization: `Bearer ${sessionStorage.getItem("Access_token")}`
         }
       });
-      console.log(response);
       dispatch(fetchParcelsSuccess(response.data));
     } catch (error) {
-      console.log(error);
       const errors = error.response.data;
       for (var key in errors) {
         toast.error(`${key}: ${errors[key]}`, {
           position: toast.POSITION.TOP_RIGHT,
-          autoClose: false,
+          autoClose: 3000,
           hideProgressBar: false
         });
       }
