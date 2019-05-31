@@ -1,26 +1,11 @@
 import React, { Component } from "react";
 import "../styles/home.scss";
 import { Link } from "react-router-dom";
-import Logo from "../styles/images/sendIt.png";
 
 class Home extends Component {
   render() {
     return (
-      <div className="alldivs">
-        <div className="navi">
-          <div className="left">
-            <img src={Logo} />
-            <span>endIT</span>
-          </div>
-          <div className="right">
-            <div>
-              <Link to="/register">Sign Up</Link>
-            </div>
-            <div>
-              <Link to="/login">Login</Link>
-            </div>
-          </div>
-        </div>
+      <div className="container">
         <div className="content">
           <div>&nbsp;</div>
           <h1>Welcome To SendIT!!</h1>
@@ -41,7 +26,7 @@ class Home extends Component {
           </p>
           <div>
             <Link to="/login">
-            <button> Login</button>
+              <button> Login</button>
             </Link>
             <Link to="/register">
               <button>Sign Up</button>

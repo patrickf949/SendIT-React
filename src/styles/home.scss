@@ -4,6 +4,11 @@
   margin-top: 100px;
   margin-bottom: 60px;
 }
+.profile {
+  width: 30px;
+  border-radius: 50%;
+  margin-top: 5px;
+}
 #resetbtn {
   display: none;
 }
@@ -141,16 +146,25 @@ button {
 }
 
 #client_table {
-  display: none;
   width: 100%;
   margin: auto;
 }
 .buttons {
   text-align: center;
 }
-tr {
-  border-bottom: 1pt solid gold;
+tbody tr {
+  border-bottom: 1pt solid black;
+  border-left: 1pt solid rgba(0, 0, 139, 0.8);
   width: 100%;
+  background: white;
+  color: black;
+}
+tbody tr:hover {
+  background: rgba(0, 0, 0, 0.4);
+  color: white;
+}
+td {
+  border-left: 1pt solid rgba(0, 0, 139, 0.8);
 }
 
 .logindiv {
@@ -259,7 +273,8 @@ hr {
     width: 100px;
   }
   .not {
-    width: 0px;
+    visibility: hidden;
+    display: none;
   }
 }
 @media only screen and (max-width: 720px) {

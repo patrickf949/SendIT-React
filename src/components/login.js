@@ -34,9 +34,14 @@ const Login = props => {
           onChange={handleChange}
           required
         />
-        <input type="submit" className="btn btn-primary" value="Sign In" />
-        <span>Do not have an account?</span>
-        <Link to="/register"> Sign Up</Link>
+        <div>
+          <input type="submit" className="btn btn-primary" value="Sign In" />
+        </div>
+
+        <div>
+          Do not have an account?
+          <Link to="/register"> Sign Up</Link>
+        </div>
       </form>
     </div>
   );
