@@ -13,7 +13,6 @@ class Dashboard extends Component {
   }
 
   componentDidMount() {
-    console.log(this.props.match.params.id);
     this.props.getParcelsAction(this.props.match.params.id);
   }
   goToParcel(id) {
@@ -22,7 +21,6 @@ class Dashboard extends Component {
 
   render() {
     const { parcels } = this.props;
-    console.log("Dem parcels", parcels);
     let s = 1;
     const parcelsList = parcels.parcels
       ? parcels.parcels.map(parcel => {

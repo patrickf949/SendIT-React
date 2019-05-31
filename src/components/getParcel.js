@@ -6,13 +6,11 @@ import { getParcelAction } from "../actions/getParcelAction";
 
 export class GetParcel extends Component {
   componentDidMount() {
-    console.log(this.props.match.params.id);
     this.props.getParcelAction(this.props.match.params.id);
   }
 
   render() {
     const { parcel } = this.props;
-    console.log("THis is the guy", parcel);
 
     const oneParcel = parcel.Parcel ? parcel.Parcel[0] : null;
     const parcelContent = oneParcel ? (

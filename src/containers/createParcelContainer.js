@@ -35,7 +35,6 @@ export class CreateParcelContainer extends Component {
     this.setState({
       [event.target.name]: event.target.value
     });
-    console.log(this.state);
   }
 
   handleSubmit(event) {
@@ -53,7 +52,6 @@ export class CreateParcelContainer extends Component {
       pickup_location: this.state.pickup_location,
       destination: this.state.destination
     };
-    console.log("Before action", data);
     this.props.parcelCreateAction(data, this.props);
   }
 

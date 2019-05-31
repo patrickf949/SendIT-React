@@ -1,0 +1,110 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App should render without crashing 1`] = `
+Array [
+  <div
+    className="alldivs"
+  >
+    <div
+      className="navi"
+    >
+      <div
+        className="left"
+      >
+        <a
+          href="/"
+          onClick={[Function]}
+        >
+          <img
+            src={Object {}}
+          />
+          <span>
+            endIT
+          </span>
+        </a>
+      </div>
+      <div
+        className="right"
+      >
+        <div>
+          <a
+            href="/register"
+            onClick={[Function]}
+          >
+            Sign Up
+          </a>
+        </div>
+        <div>
+          <a
+            href="/login"
+            onClick={[Function]}
+          >
+            Login
+          </a>
+        </div>
+      </div>
+    </div>
+    <div
+      className="container"
+    >
+      <div
+        className="content"
+      >
+        <div>
+           
+        </div>
+        <h1>
+          Welcome To SendIT!!
+        </h1>
+        <hr />
+        <p>
+          Your one stop buddy for parcel delivery
+        </p>
+        <div
+          id="lists"
+        >
+          <li>
+            E-commerce
+          </li>
+          <li>
+            Pizza
+          </li>
+          <li>
+            Old things
+          </li>
+          <li>
+            Whatever!!
+          </li>
+        </div>
+        <p>
+          Register with us for safe and timely delivery
+        </p>
+        <p>
+          SendIT is a courier service that helps users deliver parcels to different destinations. SendIT provides courier quotes based on weight categories.
+        </p>
+        <div>
+          <a
+            href="/login"
+            onClick={[Function]}
+          >
+            <button>
+               Login
+            </button>
+          </a>
+          <a
+            href="/register"
+            onClick={[Function]}
+          >
+            <button>
+              Sign Up
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>,
+  <div
+    className="Toastify"
+  />,
+]
+`;
