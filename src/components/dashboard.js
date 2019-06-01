@@ -5,7 +5,7 @@ import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
 import { getParcelsAction } from "../actions/getParcelsAction";
 
-class Dashboard extends Component {
+export class Dashboard extends Component {
   constructor(props) {
     super(props);
 
@@ -13,7 +13,7 @@ class Dashboard extends Component {
   }
 
   componentDidMount() {
-    this.props.getParcelsAction(this.props.match.params.id);
+    this.props.getParcelsAction();
   }
   goToParcel(id) {
     this.props.history.push("/parcels/" + id);

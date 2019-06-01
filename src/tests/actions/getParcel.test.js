@@ -44,7 +44,7 @@ describe("Action for getting Parcels", () => {
       const requestM = moxios.requests.mostRecent();
       requestM.respondWith({
         status: 400,
-        response: { message: "no article" }
+        response: { message: "no parcel" }
       });
     });
     return store.dispatch(getParcelAction()).then(() => {
