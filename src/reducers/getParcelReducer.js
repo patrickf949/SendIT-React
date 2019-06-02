@@ -1,9 +1,7 @@
 import { FETCH_PARCEL_SUCCESS } from "../actions/types";
 
 const initialState = {
-  parcel: {},
-  likes: 0,
-  dislikes: 0
+  parcel: {}
 };
 
 const getParcelReducer = (state = initialState, action) => {

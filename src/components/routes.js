@@ -7,6 +7,7 @@ import Header from "./header";
 import Dashboard from "./dashboard";
 import CreateParcelContainer from "../containers/createParcelContainer";
 import GetParcel from "../components/getParcel";
+import ProtectedRoute from "./protectedRoutes"
 
 class Routes extends Component {
   render() {
@@ -18,9 +19,9 @@ class Routes extends Component {
             <Route exact path="/" component={Home} />
             <Route path="/register" component={RegisterContainer} />
             <Route path="/login" component={LoginContainer} />
-            <Route path="/dashboard" component={Dashboard} />
-            <Route path="/create-parcel" component={CreateParcelContainer} />
-            <Route path="/parcels/:id" component={GetParcel} />
+            <ProtectedRoute path="/dashboard" component={Dashboard} />
+            <ProtectedRoute path="/create-parcel" component={CreateParcelContainer} />
+            <ProtectedRoute path="/parcels/:id" component={GetParcel} />
           </Switch>
         </BrowserRouter>
       </div>

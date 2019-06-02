@@ -23,14 +23,6 @@ export class CreateParcelContainer extends Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  componentWillReceiveProps(nextProps) {
-    if (nextProps.loginSuccess === true) {
-      const { history } = this.props;
-
-      history.push("/");
-    }
-  }
-
   onChange(event) {
     this.setState({
       [event.target.name]: event.target.value
@@ -69,7 +61,7 @@ export class CreateParcelContainer extends Component {
 
 export const mapStateToProps = state => ({
   isProcessing: state.parcel_create.isProcessing,
-  createArticleSuccess: state.parcel_create.createArticleSuccess
+  createParcelSuccess: state.parcel_create.createParcelSuccess
 });
 
 export default connect(

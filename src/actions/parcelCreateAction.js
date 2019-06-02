@@ -36,16 +36,16 @@ export const parcelCreateAction = (parcel, props) => {
         )
       });
     } catch (error) {
-      if (error.response) {
+      if (error.response !== undefined) {
         dispatch({
           type: PARCEL_FAIL
         });
         toast.dismiss();
-        const error = error.response
+        const errors = error.response
           ? error.response.data.message
           : "Login Sir";
 
-        toast.error(`${error}`, {
+        toast.error(`${errors}`, {
           position: toast.POSITION.TOP_RIGHT,
           autoClose: false,
           hideProgressBar: false

@@ -11,7 +11,6 @@ export class GetParcel extends Component {
 
   render() {
     const { parcel } = this.props;
-
     const oneParcel = parcel.Parcel ? parcel.Parcel[0] : null;
     const parcelContent = oneParcel ? (
       <div className="container">
