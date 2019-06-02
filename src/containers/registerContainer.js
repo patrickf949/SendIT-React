@@ -24,14 +24,6 @@ export class RegisterContainer extends Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-//   componentWillReceiveProps(nextProps) {
-//     if (nextProps.registerSuccess === true) {
-//       const { history } = this.props;
-
-//       history.push("/login");
-//     }
-//   }
-
   handleChange(event) {
     this.setState({
       [event.target.name]: event.target.value
