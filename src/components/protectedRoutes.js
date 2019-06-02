@@ -14,9 +14,11 @@ export const Authenticate = token => {
     return false;
   }
 };
+
 /* istanbul ignore next */
-const ProtectedRoute = ({ component: Component, ...props }) => {
-  const isLoggedIn = Authenticate(sessionStorage.getItem("Access_token"));
+const isLoggedIn = Authenticate(sessionStorage.getItem("Access_token"));
+/* istanbul ignore next */
+export const ProtectedRoute = ({ component: Component, ...props }) => {
   return (
     <Route
       {...props}
@@ -27,4 +29,14 @@ const ProtectedRoute = ({ component: Component, ...props }) => {
   );
 };
 
-export default ProtectedRoute;
+/* istanbul ignore next */
+export const ProtectedAuthRoute = ({ component: Component, ...props }) => {
+  return (
+    <Route
+      {...props}
+      render={props =>
+        isLoggedIn ? <Redirect to="/dashboard" /> : <Component {...props} />
+      }
+    />
+  );
+};

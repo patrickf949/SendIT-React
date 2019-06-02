@@ -1,4 +1,4 @@
-//
+// This module handles state upon Registration
 import { REGISTER_STARTED, REGISTER_FAIL, REGISTER_SUCCESS } from "../actions/types";
 
 const initialState = {
